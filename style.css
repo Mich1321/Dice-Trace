@@ -188,6 +188,9 @@ button {
 	.dicePanel {
 		flex-wrap: wrap;
 	}
+	.diceTrace {
+		height: 50vh;
+	}
 	.redBtnDice,
 	.blackBtnDice,
 	.whiteBtnDice,
@@ -197,7 +200,6 @@ button {
 		height: 35px;
 	}
 	button {
-		
 		font-size: 8px;
 	}
 	.whiteAttackDice,
@@ -208,7 +210,7 @@ button {
 		width: 35px;
 		height: 35px;
 	}
-		.whiteAttack,
+	.whiteAttack,
 	.redAttack {
 		font-size: 15px;
 	}
