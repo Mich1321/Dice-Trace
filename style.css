@@ -1,0 +1,222 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	background-image: url("./img/rex.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.dicePanel {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	/* flex-wrap: wrap; */
+	margin: 20px 0 20px 0;
+	width: 80vw;
+	height: 30vh;
+	background-color: rgba(150, 150, 150, 0.5);
+	border: solid 3px black;
+	border-radius: 10px;
+}
+.diceTrace {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 20px;
+	width: 80vw;
+	height: 70vh;
+	background-color: rgba(150, 150, 150, 0.5);
+	border: solid 3px black;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+.redBtn.blackBtn.whiteBtn.redBtn-def.whiteBtn-def {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* padding: 20px; */
+}
+.whiteBtn {
+	margin-top: 20px;
+}
+
+.redBtnDice {
+	width: 70px;
+	height: 70px;
+	background-color: red;
+	transform: rotate(45deg);
+	border-radius: 5px;
+	margin: 20px 0 20px 5px;
+}
+.blackBtnDice {
+	width: 70px;
+	height: 70px;
+	background-color: black;
+	transform: rotate(45deg);
+	border-radius: 5px;
+	margin: 20px 0 20px 5px;
+}
+.whiteBtnDice {
+	width: 70px;
+	height: 70px;
+	background-color: white;
+	transform: rotate(45deg);
+	border-radius: 5px;
+	margin: 20px 0 20px 5px;
+}
+.redBtnDice-def {
+	width: 70px;
+	height: 70px;
+	background-color: red;
+	border-radius: 5px;
+	margin: 20px 0 20px 5px;
+}
+.whiteBtnDice-def {
+	width: 70px;
+	height: 70px;
+	background-color: white;
+	border-radius: 5px;
+	margin: 20px 0 20px 5px;
+}
+button {
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgb(104, 109, 109);
+	color: white;
+	cursor: pointer;
+}
+
+.redDice {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	background-color: red;
+	border-radius: 5px;
+	margin-right: 40px;
+}
+.white {
+	font-size: 30px;
+	color: white;
+}
+.whiteDice {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	background-color: white;
+	border-radius: 5px;
+	margin-right: 40px;
+}
+
+.red {
+	font-size: 30px;
+	color: red;
+}
+.redAttackDice {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	transform: rotate(45deg);
+	background-color: red;
+	border-radius: 5px;
+	margin-right: 40px;
+}
+.blackAttackDice {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	transform: rotate(45deg);
+	background-color: black;
+	border-radius: 5px;
+	margin-right: 40px;
+}
+.whiteAttackDice {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	transform: rotate(45deg);
+	background-color: white;
+	border-radius: 5px;
+	margin-right: 40px;
+}
+
+.redAttack {
+	font-size: 30px;
+	color: red;
+	transform: rotate(-45deg);
+}
+.whiteAttack {
+	font-size: 30px;
+	color: white;
+	transform: rotate(-45deg);
+}
+.deleteAll {
+	align-self: flex-end;
+	padding: 20px 20px;
+	background-color: black;
+	font-weight: bold;
+}
+.rollAll {
+	align-self: flex-start;
+	padding: 20px 20px;
+	background-color: black;
+	font-weight: bold;
+}
+
+@media (max-width: 576px) {
+	.dicePanel {
+		flex-wrap: wrap;
+	}
+	.redBtnDice,
+	.blackBtnDice,
+	.whiteBtnDice,
+	.redBtnDice-def,
+	.whiteBtnDice-def {
+		width: 35px;
+		height: 35px;
+	}
+	button {
+		
+		font-size: 8px;
+	}
+	.whiteAttackDice,
+	.blackAttackDice,
+	.redAttackDice,
+	.whiteDice,
+	.redDice {
+		width: 35px;
+		height: 35px;
+	}
+		.whiteAttack,
+	.redAttack {
+		font-size: 15px;
+	}
+	.white,
+	.red {
+		font-size: 10px;
+	}
+}
+
+/* @media (min-width: 992px) 
+@media (min-width: 1200px) */
