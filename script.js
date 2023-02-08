@@ -1,9 +1,9 @@
 const diceTrace = document.querySelector(".diceTrace");
-const addRedDice = document.querySelector(".addRedDice");
-const addBlackDice = document.querySelector(".addBlackDice");
-const addWhiteDice = document.querySelector(".addWhiteDice");
-const addRedDiceDef = document.querySelector(".addRedDice-def");
-const addWhiteDiceDef = document.querySelector(".addWhiteDice-def");
+const redBtn = document.querySelector(".redBtn");
+const blackBtn = document.querySelector(".blackBtn");
+const whiteBtn = document.querySelector(".whiteBtn");
+const redBtnDef = document.querySelector(".redBtn-def");
+const whiteBtnDef = document.querySelector(".whiteBtn-def");
 const removeRedDice = document.querySelector(".removeRedDice");
 const deleteAll = document.querySelector(".deleteAll");
 const rollAll = document.querySelector(".rollAll");
@@ -15,30 +15,65 @@ const addNewRedDice = () => {
 	newRedDice.classList.add("redAttackDice");
 	diceTrace.append(newRedDice);
 	redDicePanel(newRedDice);
-};
+}
+	const redDicePanel = (newRedDice) => {
+		const redDiceNumber = document.createElement("p");
+		redDiceNumber.classList.add("whiteAttack");
+		redDiceNumber.textContent = "?";
+		newRedDice.append(redDiceNumber);
 
-const redDicePanel = (newRedDice) => {
-	const redDiceNumber = document.createElement("p");
-	redDiceNumber.classList.add("whiteAttack");
-	redDiceNumber.textContent = "?";
-	newRedDice.append(redDiceNumber);
+		// const singleRoll = document.querySelector(".redAttackDice");
 
-	//
-	const rollRedDice = () => {
-		let redRoll = [
-			"Hit!",
-			"Hit!",
-			"Hit!",
-			"Hit!",
-			"Hit!",
-			"Crit!",
-			"Surge",
-			"",
-		];
-		let random = Math.floor(Math.random() * redRoll.length) + 0;
-		redDiceNumber.textContent = redRoll[random];
+		// const singleRedRoll = () => {
+		// 	const singleRoll = document.querySelector(".redAttackDice");
+		// 	let redRoll = [
+		// 		"Hit!",
+		// 		"Hit!",
+		// 		"Hit!",
+		// 		"Hit!",
+		// 		"Hit!",
+		// 		"Crit!",
+		// 		"Surge",
+		// 		"",
+		// 	];
+		// 	let random = Math.floor(Math.random() * redRoll.length) + 0;
+		// 	redDiceNumber.textContent = redRoll[random];
+
+		// 	singleRoll.addEventListener("click", singleRedRoll);
+		// };
+
+		const rollRedDice = () => {
+			let redRoll = [
+				"Hit!",
+				"Hit!",
+				"Hit!",
+				"Hit!",
+				"Hit!",
+				"Crit!",
+				"Surge",
+				"",
+			];
+			let random = Math.floor(Math.random() * redRoll.length) + 0;
+			redDiceNumber.textContent = redRoll[random];
+		};
+	
+
+	// const singleRedRoll = document.querySelectorAll(".redAttackDice");
+	// for (let i = 0; i < singleRedRoll.length; i += 1) {
+	// 	singleRedRoll[i].addEventListener("click", rollRedDice);
+	// }
+	// const singleRedRoll = (e) => {
+	// 	singleRedRoll.document.querySelector(".redAttackDice");
+	// 	e.target.addEventListener("click", rollRedDice);
+	// };
+
+	const audio = () => {
+		let mySound = new Audio("../sound/rolling-dice-2-102706.mp3");
+		mySound.play();
 	};
+
 	rollAll.addEventListener("click", rollRedDice);
+	rollAll.addEventListener("click", audio);
 };
 
 // ----------BLACK ATTACK DICE-------------------
@@ -141,11 +176,11 @@ const deleteDices = () => {
 	}
 };
 
-addRedDice.addEventListener("click", addNewRedDice);
-addBlackDice.addEventListener("click", addNewBlackDice);
-addWhiteDice.addEventListener("click", addNewWhiteDice);
-addRedDiceDef.addEventListener("click", addNewRedDefDice);
-addWhiteDiceDef.addEventListener("click", addNewWhiteDefDice);
+redBtn.addEventListener("click", addNewRedDice);
+blackBtn.addEventListener("click", addNewBlackDice);
+whiteBtn.addEventListener("click", addNewWhiteDice);
+redBtnDef.addEventListener("click", addNewRedDefDice);
+whiteBtnDef.addEventListener("click", addNewWhiteDefDice);
 deleteAll.addEventListener("click", deleteDices);
 
 // const rollRedDice = () => {
