@@ -10,8 +10,6 @@ const rollAll = document.querySelector(".rollAll");
 
 // ----------RED ATTACK DICE-------------------
 
-
-
 const addNewRedDice = () => {
 	let newRedDice = document.createElement("div");
 	newRedDice.classList.add("redAttackDice");
@@ -26,21 +24,21 @@ const redDicePanel = (newRedDice) => {
 
 	const rollRedDice = () => {
 		let redRoll = [
-			"../icons/burst-white.svg",
-			"../icons/burst-white.svg",
-			"../icons/burst-white.svg",
-			"../icons/burst-white.svg",
-			"../icons/burst-white.svg",
-			"../icons/explosion-white.svg",
-			"../icons/lightning-charge-fill-white.svg",
-			"",
+			(src = "../icons/burst-white.svg"),
+			(src = "../icons/burst-white.svg"),
+			(src = "../icons/burst-white.svg"),
+			(src = "../icons/burst-white.svg"),
+			(src = "../icons/burst-white.svg"),
+			(src = "../icons/explosion-white.svg"),
+			(src = "../icons/lightning-charge-fill-white.svg"),
+			(src = ""),
 		];
 		let random = Math.floor(Math.random() * redRoll.length) + 0;
 		redDiceNumber.src = redRoll[random];
 	};
 
 	const audioSingle = () => {
-		let mySound = new Audio("../sound/dice1-94905.mp3");
+		let mySound = new Audio((src = "../sound/dice1-94905.mp3"));
 		mySound.play();
 	};
 	newRedDice.addEventListener("click", rollRedDice);
@@ -235,7 +233,6 @@ whiteBtnDef.addEventListener("click", audioAddDice);
 deleteAll.addEventListener("click", deleteDices);
 deleteAll.addEventListener("click", audioDel);
 rollAll.addEventListener("click", audio);
-
 
 // const rollRedDice = () => {
 // 	let redRoll = [
