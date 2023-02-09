@@ -24,13 +24,13 @@ const redDicePanel = (newRedDice) => {
 
 	const rollRedDice = () => {
 		let redRoll = [
-			(src = "../icons/burst-white.svg"),
-			(src = "../icons/burst-white.svg"),
-			(src = "../icons/burst-white.svg"),
-			(src = "../icons/burst-white.svg"),
-			(src = "../icons/burst-white.svg"),
-			(src = "../icons/explosion-white.svg"),
-			(src = "../icons/lightning-charge-fill-white.svg"),
+			(src = "./icons/burst-white.svg"),
+			(src = "./icons/burst-white.svg"),
+			(src = "./icons/burst-white.svg"),
+			(src = "./icons/burst-white.svg"),
+			(src = "./icons/burst-white.svg"),
+			(src = "./icons/explosion-white.svg"),
+			(src = "./icons/lightning-charge-fill-white.svg"),
 			(src = ""),
 		];
 		let random = Math.floor(Math.random() * redRoll.length) + 0;
@@ -38,7 +38,7 @@ const redDicePanel = (newRedDice) => {
 	};
 
 	const audioSingle = () => {
-		let mySound = new Audio((src = "../sound/dice1-94905.mp3"));
+		let mySound = new Audio((src = "./sound/dice1-94905.mp3"));
 		mySound.play();
 	};
 	newRedDice.addEventListener("click", rollRedDice);
@@ -63,11 +63,11 @@ const blackDicePanel = (newBlackDice) => {
 
 	const rollBlackDice = () => {
 		let blackRoll = [
-			"../icons/burst-white.svg",
-			"../icons/burst-white.svg",
-			"../icons/burst-white.svg",
-			"../icons/explosion-white.svg",
-			"../icons/lightning-charge-fill-white.svg",
+			"./icons/burst-white.svg",
+			"./icons/burst-white.svg",
+			"./icons/burst-white.svg",
+			"./icons/explosion-white.svg",
+			"./icons/lightning-charge-fill-white.svg",
 			"",
 			"",
 			"",
@@ -101,8 +101,8 @@ const whiteDicePanel = (newWhiteDice) => {
 
 	const rollWhiteDice = () => {
 		let whiteRoll = [
-			"../icons/burst-red.svg",
-			"../icons/explosion-red.svg",
+			"./icons/burst-red.svg",
+			"./icons/explosion-red.svg",
 			"../icons/lightning-charge-fill-red.svg",
 			"",
 			"",
@@ -114,7 +114,7 @@ const whiteDicePanel = (newWhiteDice) => {
 		whiteDiceNumber.src = whiteRoll[random];
 	};
 	const audioSingle = () => {
-		let mySound = new Audio("../sound/dice1-94905.mp3");
+		let mySound = new Audio("./sound/dice1-94905.mp3");
 		mySound.play();
 	};
 	newWhiteDice.addEventListener("click", rollWhiteDice);
@@ -139,10 +139,10 @@ const redDefDicePanel = (newRedDefDice) => {
 
 	const rollRedDefDice = () => {
 		let redDefRoll = [
-			"../icons/shield-fill-white.svg",
-			"../icons/shield-fill-white.svg",
-			"../icons/shield-fill-white.svg",
-			"../icons/lightning-charge-fill-white.svg",
+			"./icons/shield-fill-white.svg",
+			"./icons/shield-fill-white.svg",
+			"./icons/shield-fill-white.svg",
+			"./icons/lightning-charge-fill-white.svg",
 			"",
 			"",
 		];
@@ -150,7 +150,7 @@ const redDefDicePanel = (newRedDefDice) => {
 		redDefDiceNumber.src = redDefRoll[random];
 	};
 	const audioSingle = () => {
-		let mySound = new Audio("../sound/dice1-94905.mp3");
+		let mySound = new Audio("./sound/dice1-94905.mp3");
 		mySound.play();
 	};
 	newRedDefDice.addEventListener("click", rollRedDefDice);
@@ -175,8 +175,8 @@ const whiteDefDicePanel = (newWhiteDefDice) => {
 
 	const rollWhiteDefDice = () => {
 		let whiteDefRoll = [
-			"../icons/shield-fill-red.svg",
-			"../icons/lightning-charge-fill-red.svg",
+			"./icons/shield-fill-red.svg",
+			"./icons/lightning-charge-fill-red.svg",
 			"",
 			"",
 			"",
@@ -186,7 +186,7 @@ const whiteDefDicePanel = (newWhiteDefDice) => {
 		whiteDefDiceNumber.src = whiteDefRoll[random];
 	};
 	const audioSingle = () => {
-		let mySound = new Audio("../sound/dice1-94905.mp3");
+		let mySound = new Audio("./sound/dice1-94905.mp3");
 		mySound.play();
 	};
 	newWhiteDefDice.addEventListener("click", rollWhiteDefDice);
@@ -203,20 +203,20 @@ const deleteDices = () => {
 	}
 };
 const audioDel = () => {
-	let mySound = new Audio("../sound/lightsaber-clash-88733.mp3");
+	let mySound = new Audio("./sound/lightsaber-clash-88733.mp3");
 	mySound.play();
 };
 const audio = () => {
-	let mySound = new Audio("../sound/rolling-dice-2-102706.mp3");
+	let mySound = new Audio("./sound/rolling-dice-2-102706.mp3");
 	mySound.play();
 };
 const audioAddDice = () => {
-	let mySound = new Audio("../sound/robot_01-47250.mp3");
+	let mySound = new Audio("./sound/robot_01-47250.mp3");
 	mySound.play();
 };
 
 const audioOpen = () => {
-	let mySound = new Audio("../sound/fx4.mp3");
+	let mySound = new Audio("./sound/fx4.mp3");
 	mySound.play();
 };
 document.addEventListener("loadeddata", audioOpen);
@@ -234,21 +234,3 @@ deleteAll.addEventListener("click", deleteDices);
 deleteAll.addEventListener("click", audioDel);
 rollAll.addEventListener("click", audio);
 
-// const rollRedDice = () => {
-// 	let redRoll = [
-// 		"1",
-// 		"2",
-// 		"3",
-// 		// <i class="fa-solid fa-star"></i>,
-// 		// <i class="fa-solid fa-star"></i>,
-// 		// <i class="fa-solid fa-star"></i>,
-// 		// <i class="fa-solid fa-star"></i>,
-// 		// <i class="fa-solid fa-star"></i>,
-// 		// <i class="fa-regular fa-star"></i>,
-// 		// <i class="fa-solid fa-square-bolt"></i>,
-// 		// <i></i>
-// 	];
-// 	let random = Math.floor(Math.random() * redRoll.length) + 0;
-// 	// redDiceNumber.textContent = redRoll[random];
-// 	console.log(random);
-// };
