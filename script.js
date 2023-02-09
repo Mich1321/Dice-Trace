@@ -103,7 +103,7 @@ const whiteDicePanel = (newWhiteDice) => {
 		let whiteRoll = [
 			"./icons/burst-red.svg",
 			"./icons/explosion-red.svg",
-			"../icons/lightning-charge-fill-red.svg",
+			"./icons/lightning-charge-fill-red.svg",
 			"",
 			"",
 			"",
