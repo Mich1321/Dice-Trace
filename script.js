@@ -76,7 +76,7 @@ const blackDicePanel = (newBlackDice) => {
 		blackDiceNumber.src = blackRoll[random];
 	};
 	const audioSingle = () => {
-		let mySound = new Audio("../sound/dice1-94905.mp3");
+		let mySound = new Audio("./sound/dice1-94905.mp3");
 		mySound.play();
 	};
 	newBlackDice.addEventListener("click", rollBlackDice); //TO JEST W CHUJ WAŻNE
