@@ -7,67 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/4557611e0a.js" crossorigin="anonymous"></script>
     <title>Legion Roll</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div class="dicePanel">
-        <!-- <h2>Kliknik kość </h2> -->
+    <audio src="./sound/fx4.mp3" id="my_audio" autoplay="autoplay"></audio>
+    <script type="text/javascript">
+        window.onload=function(){
+          document.getElementById("my_audio").play();
+        }
+      </script>
+    <h1 data-aos="fade-right" data-aos-delay="400">STAR WARS LEGION</h1>
+    <div class="dicePanel" data-aos="fade-left" data-aos-delay="1000">
         <div class="redBtn">
-            
-            <div class="redBtnDice"></div>
-            
+            <div class="redBtnDice">
+                <p>+</p>
+            </div>
         </div>
-
         <div class="blackBtn">
-            
-            <div class="blackBtnDice"></div>
-            
-
+            <div class="blackBtnDice">
+                <p>+</p>
+            </div>
         </div>
         <div class="whiteBtn">
-            
-            <div class="whiteBtnDice"></div>
-            
-
+            <div class="whiteBtnDice">
+                <p>+</p>
+            </div>
         </div>
         <div class="redBtn-def">
-            
-            <div class="redBtnDice-def"></div>
-            
-
+            <div class="redBtnDice-def">
+                <p>+</p>
+            </div>
         </div>
         <div class="whiteBtn-def">
-            
-            <div class="whiteBtnDice-def"></div>
-            
+            <div class="whiteBtnDice-def">
+                <p>+</p>
+            </div>
         </div>
     </div>
-
-    <div class="diceTrace">
-
-        <!-- <div class="redDice">
-            <p class="white">1</p>
-        </div>
-        <div class="whiteDice">
-            <p class="red">1</p>
-        </div>
-        <div class="redAttackDice">
-            <p class="whiteAttack">1</p>
-        </div>
-        <div class="blackAttackDice">
-            <p class="whiteAttack">1</p>
-        </div>
-        <div class="whiteAttackDice">
-            <p class="redAttack">1</p>
-        </div> -->
-
-
-    </div>
-    <div class="diceButtons">
+    <div class="diceButtons" data-aos="fade-right" data-aos-delay="1500">
         <button class="deleteAll">Usuń Kości</button>
         <button class="rollAll">Rzuć Kośćmi</button>
     </div>
+    <div class="diceTrace" data-aos="fade-up" data-aos-delay="2000">
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            startEvent: 'DOMContentLoaded',
+            offset: 400,
+            once: true,
+        });
+    </script>
     <script src="./script.js"></script>
 </body>
 

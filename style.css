@@ -15,6 +15,14 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 }
+
+h1 {
+	margin-top: 20px;
+	font-size: 40px;
+	color: white;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
 .dicePanel {
 	display: flex;
 	justify-content: space-around;
@@ -26,6 +34,23 @@ body {
 	background-color: rgba(150, 150, 150, 0.5);
 	border: solid 3px black;
 	border-radius: 10px;
+}
+.dicePanel p {
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+	font-size: 4rem;
+	font-weight: bold;
+}
+.blackBtnDice p {
+	color: white;
+	transform: rotate(-45deg);
+}
+.redBtnDice p {
+	transform: rotate(-45deg);
+}
+.whiteBtnDice p {
+	transform: rotate(-45deg);
 }
 .diceTrace {
 	display: flex;
@@ -41,11 +66,11 @@ body {
 	margin-bottom: 10px;
 }
 
-h2{
+h2 {
 	align-self: center;
 	top: 0;
 }
-.redBtn.blackBtn.whiteBtn.redBtn-def.whiteBtn-def {
+.redBtn .blackBtn .whiteBtn .redBtn-def .whiteBtn-def {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -53,7 +78,22 @@ h2{
 	/* padding: 20px; */
 }
 
+.redBtnDice:hover {
+	box-shadow: 5px 5px 15px red;
+}
 
+.blackBtnDice:hover {
+	box-shadow: 5px 5px 15px black;
+}
+.whiteBtnDice:hover {
+	box-shadow: 5px 5px 15px white;
+}
+.redBtnDice-def:hover {
+	box-shadow: 5px 5px 15px red;
+}
+.whiteBtnDice-def:hover {
+	box-shadow: 5px 5px 15px white;
+}
 .redBtnDice {
 	width: 70px;
 	height: 70px;
@@ -111,10 +151,16 @@ button {
 	border-radius: 5px;
 	margin-right: 40px;
 }
+.redDice:hover {
+	border: 3px solid black;
+}
 .white {
 	font-size: 30px;
-	color: white;
 }
+img {
+	width: 40px;
+}
+
 .whiteDice {
 	display: flex;
 	justify-content: center;
@@ -125,7 +171,9 @@ button {
 	border-radius: 5px;
 	margin-right: 40px;
 }
-
+.whiteDice:hover {
+	border: 3px solid red;
+}
 .red {
 	font-size: 30px;
 	color: red;
@@ -141,6 +189,9 @@ button {
 	border-radius: 5px;
 	margin-right: 40px;
 }
+.redAttackDice:hover {
+	border: 3px solid black;
+}
 .blackAttackDice {
 	display: flex;
 	justify-content: center;
@@ -151,6 +202,9 @@ button {
 	background-color: black;
 	border-radius: 5px;
 	margin-right: 40px;
+}
+.blackAttackDice:hover {
+	border: 3px solid white;
 }
 .whiteAttackDice {
 	display: flex;
@@ -163,7 +217,9 @@ button {
 	border-radius: 5px;
 	margin-right: 40px;
 }
-
+.whiteAttackDice:hover {
+	border: 3px solid red;
+}
 .redAttack {
 	font-size: 30px;
 	color: red;
@@ -174,25 +230,47 @@ button {
 	color: white;
 	transform: rotate(-45deg);
 }
+.diceButtons {
+	margin-bottom: 20px;
+}
 .deleteAll {
 	align-self: flex-end;
 	padding: 20px 20px;
 	background-color: black;
 	font-weight: bold;
+	margin-right: 10px;
+	transition: background-color 0.3s, color 0.3s;
+}
+.deleteAll:hover {
+	background-color: gray;
+	color: black;
 }
 .rollAll {
 	align-self: flex-start;
 	padding: 20px 20px;
 	background-color: black;
 	font-weight: bold;
+	transition: background-color 0.3s, color 0.3s;
+}
+.rollAll:hover {
+	background-color: gray;
+	color: black;
 }
 
 @media (max-width: 576px) {
 	.dicePanel {
 		flex-wrap: wrap;
+		width: 80vw;
+		height: 20vh;
+	}
+	.dicePanel p {
+		font-size: 2em;
 	}
 	.diceTrace {
 		height: 50vh;
+	}
+	img {
+		width: 20px;
 	}
 	.redBtnDice,
 	.blackBtnDice,

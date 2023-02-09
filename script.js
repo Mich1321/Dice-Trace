@@ -10,70 +10,43 @@ const rollAll = document.querySelector(".rollAll");
 
 // ----------RED ATTACK DICE-------------------
 
+
+
 const addNewRedDice = () => {
 	let newRedDice = document.createElement("div");
 	newRedDice.classList.add("redAttackDice");
 	diceTrace.append(newRedDice);
 	redDicePanel(newRedDice);
-}
-	const redDicePanel = (newRedDice) => {
-		const redDiceNumber = document.createElement("p");
-		redDiceNumber.classList.add("whiteAttack");
-		redDiceNumber.textContent = "?";
-		newRedDice.append(redDiceNumber);
+};
+const redDicePanel = (newRedDice) => {
+	const redDiceNumber = document.createElement("img");
+	redDiceNumber.classList.add("whiteAttack");
+	redDiceNumber.src = "";
+	newRedDice.append(redDiceNumber);
 
-		// const singleRoll = document.querySelector(".redAttackDice");
-
-		// const singleRedRoll = () => {
-		// 	const singleRoll = document.querySelector(".redAttackDice");
-		// 	let redRoll = [
-		// 		"Hit!",
-		// 		"Hit!",
-		// 		"Hit!",
-		// 		"Hit!",
-		// 		"Hit!",
-		// 		"Crit!",
-		// 		"Surge",
-		// 		"",
-		// 	];
-		// 	let random = Math.floor(Math.random() * redRoll.length) + 0;
-		// 	redDiceNumber.textContent = redRoll[random];
-
-		// 	singleRoll.addEventListener("click", singleRedRoll);
-		// };
-
-		const rollRedDice = () => {
-			let redRoll = [
-				"Hit!",
-				"Hit!",
-				"Hit!",
-				"Hit!",
-				"Hit!",
-				"Crit!",
-				"Surge",
-				"",
-			];
-			let random = Math.floor(Math.random() * redRoll.length) + 0;
-			redDiceNumber.textContent = redRoll[random];
-		};
-	
-
-	// const singleRedRoll = document.querySelectorAll(".redAttackDice");
-	// for (let i = 0; i < singleRedRoll.length; i += 1) {
-	// 	singleRedRoll[i].addEventListener("click", rollRedDice);
-	// }
-	// const singleRedRoll = (e) => {
-	// 	singleRedRoll.document.querySelector(".redAttackDice");
-	// 	e.target.addEventListener("click", rollRedDice);
-	// };
-
-	const audio = () => {
-		let mySound = new Audio("../sound/rolling-dice-2-102706.mp3");
-		mySound.play();
+	const rollRedDice = () => {
+		let redRoll = [
+			"../icons/burst-white.svg",
+			"../icons/burst-white.svg",
+			"../icons/burst-white.svg",
+			"../icons/burst-white.svg",
+			"../icons/burst-white.svg",
+			"../icons/explosion-white.svg",
+			"../icons/lightning-charge-fill-white.svg",
+			"",
+		];
+		let random = Math.floor(Math.random() * redRoll.length) + 0;
+		redDiceNumber.src = redRoll[random];
 	};
 
+	const audioSingle = () => {
+		let mySound = new Audio("../sound/dice1-94905.mp3");
+		mySound.play();
+	};
+	newRedDice.addEventListener("click", rollRedDice);
 	rollAll.addEventListener("click", rollRedDice);
-	rollAll.addEventListener("click", audio);
+
+	newRedDice.addEventListener("click", audioSingle);
 };
 
 // ----------BLACK ATTACK DICE-------------------
@@ -85,17 +58,32 @@ const addNewBlackDice = () => {
 	blackDicePanel(newBlackDice);
 };
 const blackDicePanel = (newBlackDice) => {
-	const blackDiceNumber = document.createElement("p");
+	const blackDiceNumber = document.createElement("img");
 	blackDiceNumber.classList.add("whiteAttack");
-	blackDiceNumber.textContent = "?";
+	blackDiceNumber.src = "";
 	newBlackDice.append(blackDiceNumber);
 
 	const rollBlackDice = () => {
-		let blackRoll = ["Hit!", "Hit!", "Hit!", "Crit!", "Surge", "", "", ""];
+		let blackRoll = [
+			"../icons/burst-white.svg",
+			"../icons/burst-white.svg",
+			"../icons/burst-white.svg",
+			"../icons/explosion-white.svg",
+			"../icons/lightning-charge-fill-white.svg",
+			"",
+			"",
+			"",
+		];
 		let random = Math.floor(Math.random() * blackRoll.length) + 0;
-		blackDiceNumber.textContent = blackRoll[random];
+		blackDiceNumber.src = blackRoll[random];
 	};
+	const audioSingle = () => {
+		let mySound = new Audio("../sound/dice1-94905.mp3");
+		mySound.play();
+	};
+	newBlackDice.addEventListener("click", rollBlackDice); //TO JEST W CHUJ WAŻNE
 	rollAll.addEventListener("click", rollBlackDice);
+	newBlackDice.addEventListener("click", audioSingle);
 };
 
 // ----------WHITE ATTACK DICE-------------------
@@ -108,17 +96,32 @@ const addNewWhiteDice = () => {
 };
 
 const whiteDicePanel = (newWhiteDice) => {
-	const whiteDiceNumber = document.createElement("p");
+	const whiteDiceNumber = document.createElement("img");
 	whiteDiceNumber.classList.add("redAttack");
-	whiteDiceNumber.textContent = "?";
+	whiteDiceNumber.src = "";
 	newWhiteDice.append(whiteDiceNumber);
 
 	const rollWhiteDice = () => {
-		let whiteRoll = ["Hit!", "Crit!", "Surge", "", "", "", "", ""];
+		let whiteRoll = [
+			"../icons/burst-red.svg",
+			"../icons/explosion-red.svg",
+			"../icons/lightning-charge-fill-red.svg",
+			"",
+			"",
+			"",
+			"",
+			"",
+		];
 		let random = Math.floor(Math.random() * whiteRoll.length) + 0;
-		whiteDiceNumber.textContent = whiteRoll[random];
+		whiteDiceNumber.src = whiteRoll[random];
 	};
+	const audioSingle = () => {
+		let mySound = new Audio("../sound/dice1-94905.mp3");
+		mySound.play();
+	};
+	newWhiteDice.addEventListener("click", rollWhiteDice);
 	rollAll.addEventListener("click", rollWhiteDice);
+	newWhiteDice.addEventListener("click", audioSingle);
 };
 
 // ----------RED DEFENCE DICE-------------------
@@ -131,17 +134,30 @@ const addNewRedDefDice = () => {
 };
 
 const redDefDicePanel = (newRedDefDice) => {
-	const redDefDiceNumber = document.createElement("p");
+	const redDefDiceNumber = document.createElement("img");
 	redDefDiceNumber.classList.add("white");
-	redDefDiceNumber.textContent = "?";
+	redDefDiceNumber.src = "";
 	newRedDefDice.append(redDefDiceNumber);
 
 	const rollRedDefDice = () => {
-		let redDefRoll = ["Block!", "Block!", "Block!", "Surge", "", ""];
+		let redDefRoll = [
+			"../icons/shield-fill-white.svg",
+			"../icons/shield-fill-white.svg",
+			"../icons/shield-fill-white.svg",
+			"../icons/lightning-charge-fill-white.svg",
+			"",
+			"",
+		];
 		let random = Math.floor(Math.random() * redDefRoll.length) + 0;
-		redDefDiceNumber.textContent = redDefRoll[random];
+		redDefDiceNumber.src = redDefRoll[random];
 	};
+	const audioSingle = () => {
+		let mySound = new Audio("../sound/dice1-94905.mp3");
+		mySound.play();
+	};
+	newRedDefDice.addEventListener("click", rollRedDefDice);
 	rollAll.addEventListener("click", rollRedDefDice);
+	newRedDefDice.addEventListener("click", audioSingle);
 };
 
 // ----------WHITE DEFENCE DICE-------------------
@@ -154,17 +170,30 @@ const addNewWhiteDefDice = () => {
 };
 
 const whiteDefDicePanel = (newWhiteDefDice) => {
-	const whiteDefDiceNumber = document.createElement("p");
+	const whiteDefDiceNumber = document.createElement("img");
 	whiteDefDiceNumber.classList.add("red");
-	whiteDefDiceNumber.textContent = "?";
+	whiteDefDiceNumber.src = "";
 	newWhiteDefDice.append(whiteDefDiceNumber);
 
 	const rollWhiteDefDice = () => {
-		let whiteDefRoll = ["Block!", "Surge", "", "", "", ""];
+		let whiteDefRoll = [
+			"../icons/shield-fill-red.svg",
+			"../icons/lightning-charge-fill-red.svg",
+			"",
+			"",
+			"",
+			"",
+		];
 		let random = Math.floor(Math.random() * whiteDefRoll.length) + 0;
-		whiteDefDiceNumber.textContent = whiteDefRoll[random];
+		whiteDefDiceNumber.src = whiteDefRoll[random];
 	};
+	const audioSingle = () => {
+		let mySound = new Audio("../sound/dice1-94905.mp3");
+		mySound.play();
+	};
+	newWhiteDefDice.addEventListener("click", rollWhiteDefDice);
 	rollAll.addEventListener("click", rollWhiteDefDice);
+	newWhiteDefDice.addEventListener("click", audioSingle);
 };
 
 // -----------------PRZECISK USUŃ KOŚCI---------------------
@@ -175,13 +204,38 @@ const deleteDices = () => {
 		element.removeChild(element.firstChild);
 	}
 };
+const audioDel = () => {
+	let mySound = new Audio("../sound/lightsaber-clash-88733.mp3");
+	mySound.play();
+};
+const audio = () => {
+	let mySound = new Audio("../sound/rolling-dice-2-102706.mp3");
+	mySound.play();
+};
+const audioAddDice = () => {
+	let mySound = new Audio("../sound/robot_01-47250.mp3");
+	mySound.play();
+};
 
+const audioOpen = () => {
+	let mySound = new Audio("../sound/fx4.mp3");
+	mySound.play();
+};
+document.addEventListener("loadeddata", audioOpen);
 redBtn.addEventListener("click", addNewRedDice);
+redBtn.addEventListener("click", audioAddDice);
 blackBtn.addEventListener("click", addNewBlackDice);
+blackBtn.addEventListener("click", audioAddDice);
 whiteBtn.addEventListener("click", addNewWhiteDice);
+whiteBtn.addEventListener("click", audioAddDice);
 redBtnDef.addEventListener("click", addNewRedDefDice);
+redBtnDef.addEventListener("click", audioAddDice);
 whiteBtnDef.addEventListener("click", addNewWhiteDefDice);
+whiteBtnDef.addEventListener("click", audioAddDice);
 deleteAll.addEventListener("click", deleteDices);
+deleteAll.addEventListener("click", audioDel);
+rollAll.addEventListener("click", audio);
+
 
 // const rollRedDice = () => {
 // 	let redRoll = [
