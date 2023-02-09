@@ -233,4 +233,3 @@ whiteBtnDef.addEventListener("click", audioAddDice);
 deleteAll.addEventListener("click", deleteDices);
 deleteAll.addEventListener("click", audioDel);
 rollAll.addEventListener("click", audio);
-
