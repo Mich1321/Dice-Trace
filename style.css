@@ -42,8 +42,8 @@ h1 {
 	font-size: 4rem;
 	font-weight: bold;
 }
-p:focus {
-	color: transparent;
+p {
+	outline: none;
 }
 .blackBtnDice p {
 	color: white;
@@ -262,6 +262,7 @@ img {
 
 @media (max-width: 576px) {
 	h1 {
+		margin-top: 10px;
 		font-size: 20px;
 	}
 	.dicePanel {
@@ -273,7 +274,7 @@ img {
 		font-size: 2em;
 	}
 	.diceTrace {
-		height: 50vh;
+		height: 40vh;
 	}
 	img {
 		width: 20px;
@@ -305,15 +306,46 @@ img {
 	.red {
 		font-size: 10px;
 	}
+	.dicePanel p {
+		display: none;
+		
+	}
 }
 /* @media (max-width: 768px) {
 	.diceTrace {
 		height: 45vh;
 	}
 } */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
+	h1 {
+		margin-top: 10px;
+	}
 	.diceTrace {
-		height: 45vh;
+		height: 40vh;
+	}
+	.dicePanel {
+		height: 20vh;
+	}
+	.redBtnDice,
+	.blackBtnDice,
+	.whiteBtnDice,
+	.redBtnDice-def,
+	.whiteBtnDice-def {
+		width: 35px;
+		height: 35px;
+	}
+	.dicePanel p {
+		font-size: 2rem;
+		
+	}
+}
+@media (max-width: 992px) {
+	h1 {
+		margin-top: 10px;
+		
+	}
+	.diceTrace {
+		height: 40vh;
 	}
 	.dicePanel {
 		height: 18vh;
@@ -323,8 +355,12 @@ img {
 	.whiteBtnDice,
 	.redBtnDice-def,
 	.whiteBtnDice-def {
-		width: 30px;
-		height: 30px;
+		width: 35px;
+		height: 35px;
+	}
+	.dicePanel p {
+		font-size: 2rem;
+		
 	}
 }
 /* @media (min-width: 992px) 
