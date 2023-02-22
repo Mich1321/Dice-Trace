@@ -28,9 +28,9 @@ h1 {
 	justify-content: space-around;
 	align-items: center;
 	/* flex-wrap: wrap; */
-	margin: 20px 0 20px 0;
+	margin: 20px 0 10px 0;
 	width: 80vw;
-	height: 30vh;
+	height: 25vh;
 	background-color: rgba(150, 150, 150, 0.5);
 	border: solid 3px black;
 	border-radius: 10px;
@@ -62,7 +62,7 @@ p {
 	flex-wrap: wrap;
 	padding: 20px;
 	width: 80vw;
-	height: 60vh;
+	height: 55vh;
 	background-color: rgba(150, 150, 150, 0.5);
 	border: solid 3px black;
 	border-radius: 10px;
@@ -234,7 +234,7 @@ img {
 	transform: rotate(-45deg);
 }
 .diceButtons {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 .deleteAll {
 	align-self: flex-end;
