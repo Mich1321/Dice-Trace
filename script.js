@@ -196,6 +196,13 @@ const whiteDefDicePanel = (newWhiteDefDice) => {
 
 // -----------------PRZECISK USUŃ KOŚCI---------------------
 
+// const rollAllSound = () => {
+// 	let diceTrace = document.querySelector(".diceTrace")
+// 	if (diceTrace.contains(div)) {
+// 		audio();
+// 	}
+// };
+
 const deleteDices = () => {
 	let element = diceTrace;
 	while (element.firstChild) {
@@ -219,6 +226,9 @@ const audioOpen = () => {
 	let mySound = new Audio("./sound/fx4.mp3");
 	mySound.play();
 };
+
+
+
 document.addEventListener("loadeddata", audioOpen);
 redBtn.addEventListener("click", addNewRedDice);
 redBtn.addEventListener("click", audioAddDice);
@@ -233,3 +243,4 @@ whiteBtnDef.addEventListener("click", audioAddDice);
 deleteAll.addEventListener("click", deleteDices);
 deleteAll.addEventListener("click", audioDel);
 rollAll.addEventListener("click", audio);
+// document.addEventListener("DOMContentLoaded", audioOpen);

@@ -42,6 +42,9 @@ h1 {
 	font-size: 4rem;
 	font-weight: bold;
 }
+p:focus {
+	color: transparent;
+}
 .blackBtnDice p {
 	color: white;
 	transform: rotate(-45deg);
@@ -258,7 +261,7 @@ img {
 }
 
 @media (max-width: 576px) {
-	h1{
+	h1 {
 		font-size: 20px;
 	}
 	.dicePanel {
@@ -301,6 +304,11 @@ img {
 	.white,
 	.red {
 		font-size: 10px;
+	}
+}
+@media (max-width: 768px) {
+	.diceTrace {
+		height: 45vh;
 	}
 }
 
