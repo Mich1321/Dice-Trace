@@ -306,11 +306,26 @@ img {
 		font-size: 10px;
 	}
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 	.diceTrace {
 		height: 45vh;
 	}
+} */
+@media (max-width: 992px) {
+	.diceTrace {
+		height: 45vh;
+	}
+	.dicePanel {
+		height: 18vh;
+	}
+	.redBtnDice,
+	.blackBtnDice,
+	.whiteBtnDice,
+	.redBtnDice-def,
+	.whiteBtnDice-def {
+		width: 30px;
+		height: 30px;
+	}
 }
-
 /* @media (min-width: 992px) 
 @media (min-width: 1200px) */
